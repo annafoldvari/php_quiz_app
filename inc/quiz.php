@@ -10,10 +10,13 @@
 
   $toast = '';
 
+  //Session variable initialized
   //Generated questions store in a session variable so that it remains the same throught the quiz
 
   if (!isset($_SESSION['questions'])) {
     $_SESSION['questions'] = $questions;
+    $_SESSION['used_indexes'] = [];
+    $_SESSION['totalCorrect'] = 0;
   }
 
 
@@ -25,13 +28,6 @@
       $_SESSION['totalCorrect']++;
     } else {
       $toast = "Bummer! That was incorrect.";
-    }
-
-  //More session variables are initialized. One for used indexes of the questions and one for total correct answers
-
-    if (!isset($_SESSION['used_indexes'])) {
-      $_SESSION['used_indexes'] = [];
-      $_SESSION['totalCorrect'] = 0;
     }
     
   }

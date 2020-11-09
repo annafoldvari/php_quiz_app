@@ -15,7 +15,7 @@ for($i = 0; $i < $number_of_questions; $i++) {
   $inner_array['correctAnswer'] = $inner_array['leftAdder'] + $inner_array['rightAdder'];
   do {
   $inner_array['firstIncorrectAnswer'] = $inner_array['correctAnswer'] + rand(-10,10);
-  } while ($inner_array['firstIncorrectAnswer'] == $inner_array['correctAnswe']);
+  } while ($inner_array['firstIncorrectAnswer'] == $inner_array['correctAnswer']);
   do {
     $inner_array['secondIncorrectAnswer'] = $inner_array['correctAnswer'] + rand(-10,10);;
   } while ($inner_array['firstIncorrectAnswer'] == $inner_array['secondIncorrectAnswer'] OR $inner_array['secondIncorrectAnswer'] == $inner_array['correctAnswe']);
